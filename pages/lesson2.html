@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>{{ message }}</p>
+    <ol>
+        <li v-for="book in books">
+            {{ book.name }}
+        </li>
+    </ol>
+    <button v-on:click="reverseMessage">翻转</button>
+    <input v-model="message">
+</div>
+
+<script>
+
+    let app = new Vue({
+       el:"#app",
+       data:{
+           message: "Hello Vue.js",
+           books:[
+               {name:"《神雕侠侣》"},
+               {name:"《射雕英雄传》"},
+               {name:"《鹿鼎记》"},
+           ]
+       },
+       methods: {
+           reverseMessage: function(){
+               this.message = this.message.split(' ').reverse().join(' ');
+           }
+       }
+    });
+</script>
+</body>
+</html>

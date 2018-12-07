@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="hello">
+    {{ message }}
+</div>
+
+<script>
+    var app = new Vue({
+        //el制定这个vue实例与哪一个dom元素绑定
+        el:"#hello",
+        data: {
+            message: "hello world"
+        }
+    })
+</script>
+
+</body>
+</html>
