@@ -1,4 +1,8 @@
 
+/*
+*
+* 实现走迷宫算法，使用广度优先遍
+* */
 class Point {
     constructor(x, y) {
         this._x = x;
